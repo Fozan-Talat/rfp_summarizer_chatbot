@@ -1,4 +1,3 @@
-# import azure.functions as func
 import logging
 from langchain import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
@@ -22,18 +21,11 @@ import os
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import create_extraction_chain
  
-# OPENAI_DEPLOYMENT_NAME = "ksapakflask"
-# OPENAI_EMBEDDINGS_NAME = "ksapakflaskemb"
-# OPENAI_API_VERSION = "2023-07-01-preview"
-# OPENAI_API_KEY = "82d9782d4c2a43e797e16b2e20908bda"
-# OPENAI_API_BASE = "https://ksapakflask.openai.azure.com/"
-# OPENAI_API_TYPE = "azure"
-# MODEL_TEMPERATURE = 0
 
-OPENAI_DEPLOYMENT_NAME = "ksapak"
-OPENAI_EMBEDDINGS_NAME = "ksapakemb"
-OPENAI_API_VERSION = "2023-07-01-preview"
-OPENAI_API_KEY = "1a6fd35bc9dc46f88219a7cb4639f037"
+OPENAI_DEPLOYMENT_NAME = "k****"  # Fill in according to you created credentials in azure 
+OPENAI_EMBEDDINGS_NAME = "k****"
+OPENAI_API_VERSION = "2023*****"
+OPENAI_API_KEY = "****************************"
 OPENAI_API_BASE = "https://ksapoc.openai.azure.com/"
 OPENAI_API_TYPE = "azure"
 MODEL_TEMPERATURE = 0
