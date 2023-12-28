@@ -127,7 +127,6 @@ def get_vectorstore(text_chunks):
                                   openai_api_base=OPENAI_API_BASE,
                                   openai_api_type=OPENAI_API_TYPE, chunk_size=1)
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
-    # vectorstore = Chroma.from_texts(texts=text_chunks, embedding=embeddings)
     return vectorstore
  
 def get_conversation_chain(vectorstore):
@@ -198,7 +197,7 @@ def get_date_field(text):
                       openai_api_base=OPENAI_API_BASE,
                       openai_api_type=OPENAI_API_TYPE)
     chain = create_extraction_chain(schema, llm)
-    # print("abc")
+
     ans = chain.run(text)
  
     field = ans[0]["date"]
@@ -224,7 +223,7 @@ def get_address_field(text):
                       openai_api_base=OPENAI_API_BASE,
                       openai_api_type=OPENAI_API_TYPE)
     chain = create_extraction_chain(schema, llm)
-    # print("abc")
+
     ans = chain.run(text)
  
     field = ans[0]["address"]
